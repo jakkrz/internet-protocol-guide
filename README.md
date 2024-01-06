@@ -5,3 +5,5 @@
 The Communication Protocol Guide talks about the most basic internet protocols, that is, the Internet Protocol, UDP and TCP/IP. It also discusses some networking fundamentals such as the definition of an IP address and protocols.
 
 The guide is heavily based on [An Introduction to Computer Networks](http://intronetworks.cs.luc.edu/current2/html/) by Peter L Dordal at the Department of Computer Science, University of Chicago. A big thanks to him for making this possible!
+
+Click [here](https://jakkrz.github.io/internet-protocol-guide/) to view this website as Github Pages
