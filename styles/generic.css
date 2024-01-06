@@ -1,0 +1,110 @@
+:root {
+    font-size: 10px;
+    --title-font-size: 5rem;
+    --title-padding: 3rem;
+}
+
+@media screen and (max-width: 700px) {
+    :root {
+        font-size: 2vw;
+        --title-font-size: 5rem;
+        --title-padding: 1rem;
+    }
+}
+
+body {
+    background-color: white;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+h1 {
+    background-image: linear-gradient(90deg, rgb(209, 43, 181) 50%, rgb(153, 0, 255) 100%);
+    background-color: black;
+    text-shadow: black 0px 0px 5px;
+    text-align: center;
+    font-size: var(--title-font-size);
+    padding: var(--title-padding);
+    margin: 0rem;
+    color: white;
+    font-family: "Impact", "Franklin Gothic", sans-serif;
+    letter-spacing: 0.3rem;
+    font-weight: 100;
+}
+
+p {
+	margin-block: 2rem;
+	margin-inline: 1rem;
+	font-size: 1.5rem;
+	font-family: Arial;
+}
+
+h2 {
+	font-size: 3rem;
+	font-family: "Franklin Gothic", sans-serif;
+	font-weight: 100;
+	margin-inline: 1rem;
+	margin-block: 2rem;
+}
+
+img {
+    max-inline-size: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 0 auto;
+    width: 80%;
+}
+
+th {
+    background-color: rgb(230, 230, 230);
+    font-weight: normal;
+    width: 30%;
+}
+
+th, td {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-family: "Franklin Gothic", sans-serif; 
+    border: 1px solid black;
+}
+
+footer {
+    background-image: linear-gradient(90deg, rgb(209, 43, 181) 50%, rgb(153, 0, 255) 100%);
+
+    display: block;
+    margin-block-start: 5rem;
+    margin-inline: 0;
+    block-size: 8rem;
+    text-align: center;
+}
+
+footer > div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    block-size: 100%;
+}
+
+footer > div a {
+    font-family: "Franklin Gothic", sans-serif;
+    background-color: white;
+    border-radius: 2rem;
+    margin: 1.2rem;
+    flex: 1;
+    padding-block: 2rem;
+    max-width: 30rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 0 0.4rem;
+}
+
+li {
+    font-family: Arial;
+    font-size: 1.5rem;
+}

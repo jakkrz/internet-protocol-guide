@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Communication Protocols</title>
+        <link rel="stylesheet" href="styles/generic.css">
+    </head>
+    <body>
+        <h1>Internet Protocol</h1>
+        <p>A very important protocol is the internet protocol, also known as IP. There are 2 versions of internet protocol: one for IPv4-addresses named IPv4, and one for IPv6-addresses named IPv6. IP serves as a foundation for many other protocols which are built on top of IP.</p>
+        <p>IP packets contain two main parts: a header and a body. The header contains all of the metadata, and the body contains the actual information being sent in the packet. (Metadata is the data that describes the qualities of the packet, such as the length of the packet, the IP address to forward the packet to, etc.). The header of the packet is different for both versions of IP, so we will pick them apart separately.</p>
+        <p>In order for computers to communicate, they each have a unique address known as an IP address.
+            There are 2 types of IP addresses: IPv4 and IPv6. The reason we have two types is because
+            when the internet was created, the creators didn't expect a lot of people to use it.
+            There are only a limited amount of IPv4 addresses, and we are slowly running out of them.
+            Therefore, a new format named IPv6 that we are slowly trying to transition to was created.
+            While IPv4 uses 32 bits, an IPv6 address uses 128 bits. Furthermore, there are differences
+            in how they work and what the different parts mean.
+        </p>
+        <h2>The IPv4 header</h2>
+        <p>The IPv4 header is generally split into 5 or 6 words (a word being 32 bits). Here are the parts of the IPv4 header:</p>
+        <img alt="the parts of an IPv4 header" src="images/ipv4-structure.svg">
+        <p>The following table describes the function of each of these parts of the IPv4 header:</p>
+        <table>
+            <tr>
+                <th>Version</th>
+                <td>For IPv4 addresses it is always the number 4 (0100)</td>
+            </tr>
+            <tr>
+                <th>IHL</th>
+                <td>Total header length in 32-bit words. The maximum value is 15.</td>
+            </tr>
+            <tr>
+                <th>DS (differentiated services)</th>
+                <td>Used to mark packets to be treated with priority by routers. Together with ECN, this replaced the old 8-bit Type of Service field </td>
+            </tr>
+            <tr>
+                <th>ECN (explicit congestion notification)</th>
+                <td>Routers experiencing congestion can mark these bits to tell the sender that the transmission rate should be reduced</td>
+            </tr>
+            <tr>
+                <th>Total length</th>
+                <td>Specifies packet size before fragmentation.</td>
+            </tr>
+            <tr>
+                <th>Identification</th>
+                <td>A unique number used to identify fragmented packets that were originally one</td>
+            </tr>
+            <tr>
+                <th>Flags</th>
+                <td>Specifies some flags as to if and how the packet was fragmented</td>
+            </tr>
+            <tr>
+                <th>Fragment offset</th>
+                <td>Specifies which fragment of a packet this packet is</td>
+            </tr>
+            <tr>
+                <th>Time To Live (TTL)</th>
+                <td>A number (usually 64) that is decremented each time a router receives the packet to avoid forwarding loops. Once at 0, the packet gets discarded.</td>
+            </tr>
+            <tr>
+                <th>Protocol</th>
+                <td>Describes the protocol used in the body of the IP address</td>
+            </tr>
+            <tr>
+                <th>Header Checksum</th>
+                <td>Used to check a packet for corruption (if it is corrupted, it can be discarded)</td>
+            </tr>
+            <tr>
+                <th>Source address</th>
+                <td>IPv4 address of the source of the packet</td>
+            </tr>
+            <tr>
+                <th>Destination address</th>
+                <td>IPv4 address of the destination of the packet</td>
+            </tr>
+            <tr>
+                <th>IP options</th>
+                <td>Different options for controlling the packet</td>
+            </tr>
+            <tr>
+                <th>Padding</th>
+                <td>Padding bits for alignment</td>
+            </tr>
+        </table>
+        <h2>The IPv6 header</h2>
+        <img alt="the parts of an IPv6 header" src="images/ipv6-structure.svg">
+        <p>A lot of these fields work similarly to the IPv4 fields. A lot of fields have been removed because they were unnecessary and IPv6 was designed with simplicity in mind. 
+            The following table describes the function of some of the new parts in the IPv6 header:
+        </p>
+        <table>
+            <tr>
+                <th>Version</th>
+                <td>For IPv6, it is set to 6 (0110)</td>
+            </tr>
+            <tr>
+                <th>Traffic class</th>
+                <td>Used to specify priority when routing the packets</td>
+            </tr>
+            <tr>
+                <th>Source/destination address</th>
+                <td>Same as IPv4, but this time as IPv6 addresses</td>
+            </tr>
+            <tr>
+                <th>Flow label</th>
+                <td>Used to identify sequences of packets travelling to some shared destination</td>
+            </tr>
+            <tr>
+                <th>Payload length</th>
+                <td>Specifies the length of the payload</td>
+            </tr>
+            <tr>
+                <th>Next header</th>
+                <td>Specifies internet-layer options</td>
+            </tr>
+        </table>
+        <footer>
+            <div>
+                <a href="protocols.html">Previous Page</a>
+                <a href="index.html">Return to home</a>
+                <a href="udp-tcp-ip.html">Next Page</a>
+            </div>
+        </footer>
+    </body>
+</html>

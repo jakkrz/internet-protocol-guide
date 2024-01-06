@@ -1,0 +1,24 @@
+.main-flex {
+    inline-size: 90%;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-flex > article {
+    background-color: rgb(197, 137, 231);
+    border-radius: 3rem;
+}
+
+.big {
+    font-size: 5rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+
+}

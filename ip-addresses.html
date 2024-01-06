@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Communication Protocols</title>
+        <link rel="stylesheet" href="styles/generic.css">
+    </head>
+    <body>
+        <h1>IP addresses</h1>
+        <p>Every computer has a unique identifier known as an IP-address. In this lesson, we will briefly
+            dicuss IP addresses.</p>
+        <h2>The two types of IP addresses</h2>
+        <p>In order for computers to communicate, they each have a unique address known as an IP address.
+            There are 2 types of IP addresses: IPv4 and IPv6. The reason we have two types is because
+            when the internet was created, the creators didn't expect a lot of people to use it.
+            There are only a limited amount of IPv4 addresses, and we are slowly running out of them.
+            Therefore, a new format named IPv6 that we are slowly trying to transition to was created.
+            While IPv4 uses 32 bits, an IPv6 address uses 128 bits. Furthermore, there are differences
+            in how they work and what the different parts mean.
+        </p>
+        <h2>IPv4 addresses</h2>
+        <p>IPv4 addresses take up 32 bits and are typically represented as 4 bytes converted into decimal and delimited by dots. For example, 197.254.122.78 is the typical
+            representation of an IP address. Additionally, each of these bytes is called an octet, since not all computers had 8-bit bytes in the days that IPv4 addresses
+            were invented. (Nowadays virtually every computer has 8-bit bytes, so the words 'octet' and 'byte' can be used interchangeably).
+        </p>
+        <p>
+            IPv4 addresses used to have a system where depending on the first byte of the IP address, different parts of the IP address signified the network address (a unique
+            address to every network) and the host address (a unique address for every device on a network). However this was scrapped in 1981. Nowadays the system
+            for determining the network and host part of an IP address is quite complicated and can vary from place to place.
+        </p>
+        <p>
+            IPv4 addresses used to be received by <a href="https://iana.org">IANA</a>, but nowadays IANA delegates this task to 6 sites, each of which specialises in a
+            certain part of the earth:
+            
+            <ul>
+                <li>ARIN – North America</li>
+                <li>RIPE – Europe, the Middle East and parts of Asia</li>
+                <li>APNIC - East Asia and Pacific</li>
+                <li>AfriNIC - Africa</li>
+                <li>LACNIC - Central and South America</li>
+            </ul>
+        </p>
+        <p>As of January 2015, ARIN has run out of IP addresses. Companies purchased ARIN IPv4 addresses from other companies
+            in hopes that they could sell them for more in the future when demand grows.
+        </p>
+        <p>This is the reason we need to start moving to IPv6 addresses: we are slowly but steadilly
+            running out of IPv4 addresses.
+        </p>
+        <h2>IPv6 addresses</h2>
+        <p>IPv6 addresses are 16 bytes long and are typically represented as groups of 2 bytes written in
+            the hexadecimal system (number system with 16 digits: 0123456789ABCDEF) delimited with colons (:).
+            Thus, an IPv6 address can look like this: 2001:0db8:0033:0444:0000:0000:7777:0000. 0s Preceeding 
+            the groups of 2 bytes can be ommitted. Additionally,
+            if one or more consecutive groups of 2 are filled with 0s,
+            a double colon (::) may be used once.
+        </p>
+        <p>This address can be condensed to 2001:db8:33:444::7777:0. Note that keeping the final
+            group as a 0 is necessary, because if we used a colon, that would introduce ambiguity
+            as to where and how many ommitted bytes should be substituted in. 
+        </p>
+        <p>IPv6 addresses are also split into a host and network part, just like IPv4 addresses.</p>
+		<footer>
+            <div>
+                <a href="index.html">Return to home</a>
+                <a href="protocols.html">Next Page</a>
+            </div>
+        </footer>
+    </body>
+</html>
